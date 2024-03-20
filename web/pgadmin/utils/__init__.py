@@ -8,6 +8,7 @@
 ##########################################################################
 
 import os
+import platform
 import sys
 import json
 import subprocess
@@ -132,6 +133,7 @@ class PgAdminModule(Blueprint):
 
 
 IS_WIN = (os.name == 'nt')
+IS_MACOS = ('MacOS' in platform.platform())
 
 sys_encoding = sys.getdefaultencoding()
 if not sys_encoding or sys_encoding == 'ascii':
